@@ -7903,7 +7903,7 @@ html {
 /* Fontawesome Start */
 /* ------------------------------------------------*/
 /*!
- * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -8000,9 +8000,8 @@ html {
 
 .fa-border {
   border: solid 0.08em #eee;
-  -webkit-border-radius: .1em;
-     -moz-border-radius: .1em;
-          border-radius: .1em;
+  -moz-border-radius: .1em;
+       border-radius: .1em;
   padding: .2em .25em .15em;
 }
 
@@ -8752,6 +8751,10 @@ readers do not read off random characters that represent icons */
 
 .fa-box-open:before {
   content: "\f49e";
+}
+
+.fa-box-tissue:before {
+  content: "\f95b";
 }
 
 .fa-boxes:before {
@@ -9518,6 +9521,10 @@ readers do not read off random characters that represent icons */
   content: "\f6ca";
 }
 
+.fa-dailymotion:before {
+  content: "\f952";
+}
+
 .fa-dashcube:before {
   content: "\f210";
 }
@@ -9632,6 +9639,10 @@ readers do not read off random characters that represent icons */
 
 .fa-discourse:before {
   content: "\f393";
+}
+
+.fa-disease:before {
+  content: "\f7fa";
 }
 
 .fa-divide:before {
@@ -9940,6 +9951,10 @@ readers do not read off random characters that represent icons */
 
 .fa-fast-forward:before {
   content: "\f050";
+}
+
+.fa-faucet:before {
+  content: "\f905";
 }
 
 .fa-fax:before {
@@ -10590,8 +10605,16 @@ readers do not read off random characters that represent icons */
   content: "\f4be";
 }
 
+.fa-hand-holding-medical:before {
+  content: "\f95c";
+}
+
 .fa-hand-holding-usd:before {
   content: "\f4c0";
+}
+
+.fa-hand-holding-water:before {
+  content: "\f4c1";
 }
 
 .fa-hand-lizard:before {
@@ -10638,6 +10661,10 @@ readers do not read off random characters that represent icons */
   content: "\f257";
 }
 
+.fa-hand-sparkles:before {
+  content: "\f95d";
+}
+
 .fa-hand-spock:before {
   content: "\f259";
 }
@@ -10650,8 +10677,20 @@ readers do not read off random characters that represent icons */
   content: "\f4c4";
 }
 
+.fa-hands-wash:before {
+  content: "\f95e";
+}
+
 .fa-handshake:before {
   content: "\f2b5";
+}
+
+.fa-handshake-alt-slash:before {
+  content: "\f95f";
+}
+
+.fa-handshake-slash:before {
+  content: "\f960";
 }
 
 .fa-hanukiah:before {
@@ -10680,6 +10719,22 @@ readers do not read off random characters that represent icons */
 
 .fa-hdd:before {
   content: "\f0a0";
+}
+
+.fa-head-side-cough:before {
+  content: "\f961";
+}
+
+.fa-head-side-cough-slash:before {
+  content: "\f962";
+}
+
+.fa-head-side-mask:before {
+  content: "\f963";
+}
+
+.fa-head-side-virus:before {
+  content: "\f964";
 }
 
 .fa-heading:before {
@@ -10778,6 +10833,10 @@ readers do not read off random characters that represent icons */
   content: "\f47e";
 }
 
+.fa-hospital-user:before {
+  content: "\f80d";
+}
+
 .fa-hot-tub:before {
   content: "\f593";
 }
@@ -10812,6 +10871,10 @@ readers do not read off random characters that represent icons */
 
 .fa-house-damage:before {
   content: "\f6f1";
+}
+
+.fa-house-user:before {
+  content: "\f965";
 }
 
 .fa-houzz:before {
@@ -10904,6 +10967,10 @@ readers do not read off random characters that represent icons */
 
 .fa-instagram:before {
   content: "\f16d";
+}
+
+.fa-instagram-square:before {
+  content: "\f955";
 }
 
 .fa-intercom:before {
@@ -11056,6 +11123,10 @@ readers do not read off random characters that represent icons */
 
 .fa-laptop-code:before {
   content: "\f5fc";
+}
+
+.fa-laptop-house:before {
+  content: "\f966";
 }
 
 .fa-laptop-medical:before {
@@ -11212,6 +11283,14 @@ readers do not read off random characters that represent icons */
 
 .fa-luggage-cart:before {
   content: "\f59d";
+}
+
+.fa-lungs:before {
+  content: "\f604";
+}
+
+.fa-lungs-virus:before {
+  content: "\f967";
 }
 
 .fa-lyft:before {
@@ -11436,6 +11515,10 @@ readers do not read off random characters that represent icons */
 
 .fa-mixcloud:before {
   content: "\f289";
+}
+
+.fa-mixer:before {
+  content: "\f956";
 }
 
 .fa-mizuni:before {
@@ -11754,6 +11837,10 @@ readers do not read off random characters that represent icons */
   content: "\f704";
 }
 
+.fa-people-arrows:before {
+  content: "\f968";
+}
+
 .fa-people-carry:before {
   content: "\f4ce";
 }
@@ -11882,6 +11969,10 @@ readers do not read off random characters that represent icons */
   content: "\f5b0";
 }
 
+.fa-plane-slash:before {
+  content: "\f969";
+}
+
 .fa-play:before {
   content: "\f04b";
 }
@@ -11980,6 +12071,14 @@ readers do not read off random characters that represent icons */
 
 .fa-project-diagram:before {
   content: "\f542";
+}
+
+.fa-pump-medical:before {
+  content: "\f96a";
+}
+
+.fa-pump-soap:before {
+  content: "\f96b";
 }
 
 .fa-pushed:before {
@@ -12362,6 +12461,10 @@ readers do not read off random characters that represent icons */
   content: "\f3ed";
 }
 
+.fa-shield-virus:before {
+  content: "\f96c";
+}
+
 .fa-ship:before {
   content: "\f21a";
 }
@@ -12376,6 +12479,10 @@ readers do not read off random characters that represent icons */
 
 .fa-shoe-prints:before {
   content: "\f54b";
+}
+
+.fa-shopify:before {
+  content: "\f957";
 }
 
 .fa-shopping-bag:before {
@@ -12556,6 +12663,10 @@ readers do not read off random characters that represent icons */
 
 .fa-snowplow:before {
   content: "\f7d2";
+}
+
+.fa-soap:before {
+  content: "\f96e";
 }
 
 .fa-socks:before {
@@ -12778,12 +12889,24 @@ readers do not read off random characters that represent icons */
   content: "\f2f2";
 }
 
+.fa-stopwatch-20:before {
+  content: "\f96f";
+}
+
 .fa-store:before {
   content: "\f54e";
 }
 
 .fa-store-alt:before {
   content: "\f54f";
+}
+
+.fa-store-alt-slash:before {
+  content: "\f970";
+}
+
+.fa-store-slash:before {
+  content: "\f971";
 }
 
 .fa-strava:before {
@@ -13100,6 +13223,10 @@ readers do not read off random characters that represent icons */
 
 .fa-toilet-paper:before {
   content: "\f71e";
+}
+
+.fa-toilet-paper-slash:before {
+  content: "\f972";
 }
 
 .fa-toolbox:before {
@@ -13518,6 +13645,18 @@ readers do not read off random characters that represent icons */
   content: "\f1ca";
 }
 
+.fa-virus:before {
+  content: "\f974";
+}
+
+.fa-virus-slash:before {
+  content: "\f975";
+}
+
+.fa-viruses:before {
+  content: "\f976";
+}
+
 .fa-vk:before {
   content: "\f189";
 }
@@ -13799,7 +13938,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa.fa-glass:before {
@@ -16585,16 +16724,16 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  font-display: auto;
-  src: url("../fonts/Fontawesome/fa-solid-900.eot");
-  src: url("../fonts/Fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/Fontawesome/fa-solid-900.woff2") format("woff2"), url("../fonts/Fontawesome/fa-solid-900.woff") format("woff"), url("../fonts/Fontawesome/fa-solid-900.ttf") format("truetype"), url("../fonts/Fontawesome/fa-solid-900.svg#fontawesome") format("svg");
+  font-display: block;
+  src: url("../webfonts/fa-solid-900.eot");
+  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
 .fa,
@@ -16604,16 +16743,16 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
-  src: url("../fonts/Fontawesome/fa-regular-400.eot");
-  src: url("../fonts/Fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/Fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/Fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/Fontawesome/fa-regular-400.ttf") format("truetype"), url("../fonts/Fontawesome/fa-regular-400.svg#fontawesome") format("svg");
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.eot");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 .far {
@@ -16622,20 +16761,21 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url("../fonts/Fontawesome/fa-brands-400.eot");
-  src: url("../fonts/Fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/Fontawesome/fa-brands-400.woff2") format("woff2"), url("../fonts/Fontawesome/fa-brands-400.woff") format("woff"), url("../fonts/Fontawesome/fa-brands-400.ttf") format("truetype"), url("../fonts/Fontawesome/fa-brands-400.svg#fontawesome") format("svg");
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-brands-400.eot");
+  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
 }
 
 /* ------------------------------------------------*/
@@ -16815,32 +16955,28 @@ readers do not read off random characters that represent icons */
 
 .swiper-container-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -moz- oldlinear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -moz- oldlinear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -moz- oldlinear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -moz- oldlinear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
@@ -17057,9 +17193,8 @@ readers do not read off random characters that represent icons */
   width: 8px;
   height: 8px;
   display: inline-block;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  -moz-border-radius: 100%;
+       border-radius: 100%;
   background: #000;
   opacity: 0.2;
 }
@@ -17208,9 +17343,8 @@ button.swiper-pagination-bullet {
 
 /* Scrollbar */
 .swiper-scrollbar {
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+  -moz-border-radius: 10px;
+       border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
@@ -17239,9 +17373,8 @@ button.swiper-pagination-bullet {
   width: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+  -moz-border-radius: 10px;
+       border-radius: 10px;
   left: 0;
   top: 0;
 }
@@ -17315,9 +17448,8 @@ button.swiper-pagination-bullet {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  -moz-border-radius: 50%;
+       border-radius: 50%;
   border-top-color: transparent;
 }
 
@@ -18357,9 +18489,8 @@ body.vegas-container > .vegas-slide {
   background: rgba(0, 0, 0, 0.51);
   text-align: center;
   padding: 2px 4px;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  -moz-border-radius: 5px;
+       border-radius: 5px;
   font-family: "Droid Sans",sans-serif;
   -webkit-animation: fade .1s infinite alternate;
   -moz-animation: fade .1s infinite alternate;
@@ -18418,9 +18549,8 @@ body.vegas-container > .vegas-slide {
   font-size: 45px;
   color: #fff;
   text-align: center;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  -moz-border-radius: 100%;
+       border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   width: 80px;
@@ -18469,9 +18599,8 @@ body.vegas-container > .vegas-slide {
   position: relative;
   left: 0;
   overflow: hidden;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -moz-border-radius: 4px;
+       border-radius: 4px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
@@ -18646,9 +18775,8 @@ body.vegas-container > .vegas-slide {
           box-sizing: border-box;
   margin-right: 10px;
   cursor: pointer !important;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -moz-border-radius: 3px;
+       border-radius: 3px;
 }
 
 .mb_YTPBar.compact .simpleSlider {
@@ -18972,14 +19100,13 @@ body.vegas-container > .vegas-slide {
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
   background: url(../img/default-skin.png) 0 0 no-repeat;
-  -webkit-background-size: 264px 88px;
-     -moz-background-size: 264px 88px;
-          background-size: 264px 88px;
+  -moz-background-size: 264px 88px;
+       background-size: 264px 88px;
   width: 44px;
   height: 44px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (-o-min-device-pixel-ratio: 35/32), (min-resolution: 105dpi), (-o-min-device-pixel-ratio: 11/10), (min-resolution: 1.1dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min--moz-device-pixel-ratio: 1.09375), (-o-min-device-pixel-ratio: 35/32), (min-resolution: 105dpi), (min--moz-device-pixel-ratio: 1.1), (-o-min-device-pixel-ratio: 11/10), (min-resolution: 1.1dppx) {
   /* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
   .pswp--svg .pswp__button,
   .pswp--svg .pswp__button--arrow--left:before,
@@ -19114,9 +19241,8 @@ body.vegas-container > .vegas-slide {
   position: absolute;
   background: #FFF;
   top: 56px;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
+  -moz-border-radius: 2px;
+       border-radius: 2px;
   display: block;
   width: auto;
   right: 44px;
@@ -19153,15 +19279,13 @@ body.vegas-container > .vegas-slide {
 
 .pswp__share-tooltip a:first-child {
   /* round corners on the first/last list item */
-  -webkit-border-radius: 2px 2px 0 0;
-     -moz-border-radius: 2px 2px 0 0;
-          border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+       border-radius: 2px 2px 0 0;
 }
 
 .pswp__share-tooltip a:last-child {
-  -webkit-border-radius: 0 0 2px 2px;
-     -moz-border-radius: 0 0 2px 2px;
-          border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+       border-radius: 0 0 2px 2px;
 }
 
 .pswp__share-modal--fade-in {
@@ -19355,9 +19479,8 @@ a.pswp__share--download:hover {
   width: 14px;
   height: 14px;
   border: 2px solid #FFF;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  -moz-border-radius: 50%;
+       border-radius: 50%;
   border-left-color: transparent;
   border-bottom-color: transparent;
   position: absolute;
