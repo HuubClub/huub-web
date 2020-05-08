@@ -68,7 +68,7 @@
 }
 
 .fullscreen-bg-3 {
-  background-image: url("http://via.placeholder.com/1920x1080");
+  background-image: url("../img/backgrounds/main.jpg");
 }
 
 .swiper-slide-1 {
@@ -88,27 +88,27 @@
 }
 
 .menu-image-1 {
-  background-image: url("http://via.placeholder.com/300x1200");
+  background-image: url("../img/backgrounds/menu1.jpg");
 }
 
 .menu-image-2 {
-  background-image: url("http://via.placeholder.com/300x1200");
+  background-image: url("../img/backgrounds/menu2.jpg");
 }
 
 .menu-image-3 {
-  background-image: url("http://via.placeholder.com/300x1200");
+  background-image: url("../img/backgrounds/menu3.jpg");
 }
 
 .menu-image-4 {
-  background-image: url("http://via.placeholder.com/300x1200");
+  background-image: url("../img/backgrounds/menu4.jpg");
 }
 
 .menu-image-5 {
-  background-image: url("http://via.placeholder.com/300x1200");
+  background-image: url("../img/backgrounds/menu5.jpg");
 }
 
 .menu-image-6 {
-  background-image: url("http://via.placeholder.com/300x1200");
+  background-image: url("../img/backgrounds/menu6.jpg");
 }
 
 /* ------------------------------------------------*/
