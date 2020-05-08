@@ -1,0 +1,160 @@
+// Content section
+.content-section
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: auto
+  padding-top: 100px
+  background-color: $bg-dark
+  overflow-y: auto
+  z-index: 3
+  .content-section__info,
+  .blocks-container,
+  .content-section__media
+    transition: all $animation-duration - 0.2s ease-in-out
+  &.transparent
+    background-color: transparent
+  &.animate-in
+    display: block
+    //z-index: 10
+    .blocks-container
+      .content-block
+        animation: $animation-duration ease-in-out $animation-delay + 0.5s 1 both fadeIn
+    .media-container
+      &::before
+        animation: 1s ease-in-out 0s 1 both blockMove
+      .image, .map, .gallery
+        animation: 1s ease-in-out 0s 1 both itemsOpacityReverse
+  &.animate-out
+    .content-section__info,
+    .content-section__media
+      opacity: 0
+      visibility: hidden
+  &.popup-is-visible
+    .content-section__media
+      opacity: 0
+      visibility: hidden
+    .blocks-container
+      opacity: 0
+
+  +MQ(XL)
+    height: 100%
+    padding-top: 0
+    overflow: hidden
+    &.popup-is-visible
+      .content-section__media
+        opacity: 1
+        visibility: visible
+      .blocks-container
+        opacity: 0
+
+// Content sections first state - invisible
+.about,
+.lineup,
+.contact
+  display: none
+
+// Hidden section start state
+.blocks-container
+  .content-block
+    opacity: 0
+.media-container
+  &::before
+    transform: translateY(-102%)
+  .image, .map, .gallery
+    opacity: 0
+
+// Active content section appearance animation
+.active
+
+
+// Content sections main blocks (left and right on desktop)
+.content-section__info,
+.content-section__media
+  position: relative
+  +MQ(XL)
+    height: 100%
+
+// Text blocks container
+.blocks-container
+  padding: 100px 0
+  +MQ(XL)
+    position: absolute
+    left: 100px
+    +center(y)
+    width: calc(100% - 100px)
+    padding: 0
+
+// Media container
+.media-container
+  position: relative
+  overflow: hidden
+  height: 100vh
+  min-height: 568px
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: shade($bg-dark, 20%)
+    transition: transform $animation-duration - .5s ease-in-out
+    z-index: 1
+  +MQ(XL)
+    height: 100%
+
+// Portfolio section static block special properties
+.lineup
+  .media-container
+    height: auto
+    +MQ(M)
+      height: auto
+    +MQ(L)
+      height: 100%
+
+// All content blocks
+.content-block
+  position: relative
+  width: 100%
+  padding: 0 3.3rem
+  margin-bottom: 4rem
+  &:last-of-type
+    margin-bottom: 0
+  &.contact-data,
+  &.features
+    padding: 0 calc(3.3rem - 15px)
+  +MQ(XL)
+    padding: 0 10rem
+    &.contact-data,
+    &.features
+      padding: 0 calc(10rem - 15px)
+    &:last-of-type
+      margin-bottom: 0
+  +MQ(XXL)
+    padding: 0 12rem
+    &.contact-data,
+    &.features
+      padding: 0 calc(12rem - 15px)
+
+// Section media image
+.image
+  position: relative
+  height: 100vh
+  min-height: 568px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  +MQ(XL)
+    height: 100%
+
+.image-caption
+  +position(absolute, null null 0 0)
+  width: 100%
+  padding: 2.4rem
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translate3d(0, 50px, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)

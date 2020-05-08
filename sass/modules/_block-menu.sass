@@ -1,0 +1,173 @@
+.menu
+  display: block
+  +position(fixed, 0 null null 0)
+  width: 100%
+  height: 100%
+  padding-top: 100px
+  background-color: $bg-dark
+  overflow-y: auto
+  opacity: 0
+  visibility: hidden
+  z-index: 9
+  transition: all $animation-duration - .2s ease-in-out
+
+  &.transparent
+    background-color: transparent
+
+  &.animate-in
+    opacity: 1
+    visibility: visible
+
+    .menu__media
+      .media-object
+        &:nth-of-type(6)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .6s $animation-delay - .2s
+        &:nth-of-type(5)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .6s $animation-delay - .1s
+        &:nth-of-type(4)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .6s $animation-delay
+        &:nth-of-type(3)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .6s $animation-delay + .1s
+        &:nth-of-type(2)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .6s $animation-delay + .2s
+        &:nth-of-type(1)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .6s $animation-delay + .3s
+
+    .navigation
+      li
+        &:nth-of-type(1)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .3s $animation-delay + .5s , opacity .3s $animation-delay + .5s
+        &:nth-of-type(2)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .3s $animation-delay + .6s , opacity .3s $animation-delay + .6s
+        &:nth-of-type(3)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .3s $animation-delay + .7s , opacity .3s $animation-delay + .7s
+        &:nth-of-type(4)
+          opacity: 1
+          transform: translateX(0)
+          transition: transform .3s $animation-delay + .8s , opacity .3s $animation-delay + .8s
+
+  &.animate-out
+    opacity: 0
+    visibility: hidden
+
+  +MQ(XL)
+    padding-top: 0
+    height: 100%
+    min-height: 546px
+
+.menu__navigation
+  position: relative
+  height: auto
+  .navigation-container
+    position: relative
+    padding: 100px 0
+  +MQ(XL)
+    height: 100%
+    .navigation-container
+      height: 100%
+      padding: 0
+
+.menu__media
+  position: relative
+  height: 100vh
+  min-height: 568px
+  overflow: hidden
+  .media-object
+    transform: translateY(100%)
+    transition: opacity $animation-delay, transform $animation-delay
+  +MQ(XL)
+    height: 100%
+
+.menu-image
+  position: relative
+  height: 100%
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.navigation
+  position: relative
+  padding: 0 3.3rem
+  li
+    display: block
+    position: relative
+    margin: 0 0 4rem 0
+    overflow: hidden
+    opacity: 0
+    transform: translateY(50px)
+    transition: opacity $animation-delay, transform $animation-delay
+    &:last-of-type
+      margin: 0
+  +MQ(XL)
+    position: absolute
+    left: 100px
+    +center(y)
+    width: calc(100% - 100px)
+    padding: 0 10rem
+  +MQ(XXL)
+    padding: 0 12rem
+
+.navigation__item
+  display: block
+  position: relative
+  padding: 0
+  .subtitle
+    display: block
+    font: normal 400 1.4rem/1.2 $default-font
+    text-transform: uppercase
+    letter-spacing: 0.1rem
+    padding-left: 2px
+    color: $txt-white-transparent
+    transition: all 0.3s ease-in-out
+  .link
+    display: inline-block
+    position: relative
+    font: normal 500 4.8rem/1 $caption-font
+    text-transform: uppercase
+    color: rgba($txt-white, 0.8)
+    transition: all 0.3s ease-in-out
+  .no-touch &:hover
+    .subtitle,
+    .link
+      color: $txt-white
+  &.active-link
+    .subtitle
+      color: $txt-white
+    .link
+      color: $txt-white
+      background: -webkit-linear-gradient(0deg, rgba(252,70,107,1) 0%,rgba(0,219,222,1) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    .no-touch &:hover
+      .subtitle
+        color: $txt-white
+      .link
+        overflow: visible
+        color: $txt-white
+        background: -webkit-linear-gradient(0deg, rgba(252,70,107,1) 0%,rgba(0,219,222,1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+  +MQ(M)
+    .link
+      font-size: 6rem
+  +MQ(XXL)
+    .link
+      font-size: 7.5rem

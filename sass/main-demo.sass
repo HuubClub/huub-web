@@ -1,0 +1,897 @@
+/*! ------------------------------------------------
+   Project Name: Unio Coming Soon & Landing Page Template
+   Project Description: Unio - colorful and stylish coming soon & landing page template to kick-start your project
+   Tags: unio, coming soon, under construction, template, coming soon page, landing page, one page, html5, css3
+   Version: 1.0.0
+   Build Date: March 2020
+   Last Update: March 2020
+   This product is available exclusively on Themeforest
+   Author: mix_design
+   Author URI: http://mixdesign.club
+   File name: main-demo.css
+   ------------------------------------------------
+
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Loader Styles
+    2. Loading Animation
+    3. Fonts
+    4. Base CSS Styles
+    5. Buttons & Triggers Styles
+    6. Intro Styles
+    7. Preview Sections Styles
+    8. Headline Styles
+    9. Preview Links Styles
+    10. Subscribe Section Styles
+    11. Footer Styles
+    12. Animations
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Libs, Mixins and Variables
+@import "partials/layout"
+@import "partials/mixins"
+@import "partials/variables"
+
+/* ------------------------------------------------*/
+/* Loader Styles Start
+/* ------------------------------------------------*/
+.loader
+  +position(fixed, 0 0 0 0)
+  z-index: 9999
+  background-color: transparent
+  opacity: 1
+  visibility: visible
+  transition: all .6s ease-in-out
+
+  &.loaded
+    opacity: 0
+    visibility: hidden
+
+  &.is-animated
+    .loader__darkscreen
+      animation: 1s 0.6s ease-in-out 1 both blockMove
+    .loader__container
+      animation: 1s 0.6s ease-in-out 1 both itemsOpacity
+
+.loader__container
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-color: tint($bg-dark, 5%)
+  .loader-content
+    position: absolute
+    +center
+    .loader-logo
+      width: 160px
+      img
+        display: block
+        width: 100%
+        height: auto
+
+.loader__darkscreen
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-color: shade($bg-dark, 20%)
+  transform: translateY(102%)
+
+.fadeIn
+  animation: fadeIn .6s 1
+  animation-fill-mode: both
+
+.fadeOut
+  animation: fadeOut .6s 1
+  animation-fill-mode: both
+/* ------------------------------------------------*/
+/* Loader Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Loading Animation Styles Start
+/* ------------------------------------------------*/
+body
+  // 1-st state
+  .headline
+    opacity: 0
+  header
+    .logo,
+    .buttons
+      opacity: 0
+  .intro__illustrations
+    .illustration-1,
+    .illustration-2,
+    .illustration-3,
+    .illustration-4,
+    .illustration-5,
+    .object-1,
+    .object-2
+      opacity: 0
+
+  &.loaded
+    // 1-st Items Loading
+    .headline
+      animation: $animation-duration $animation-delay ease-in-out 1 both slideInUp
+    header
+      .logo,
+      .buttons
+        animation: $animation-duration $animation-delay ease-in-out 1 both fadeIn
+    .intro__illustrations
+      .illustration-1
+        animation: $animation-duration $animation-delay ease-in-out 1 both fadeIn
+
+    // 2-nd Items Loading
+    .intro__illustrations
+      .illustration-2
+        animation: $animation-duration - 0.3s $animation-delay + .6s ease-in-out 1 both slideInUp
+      .illustration-4
+        animation: $animation-duration - 0.3s $animation-delay + .6s ease-in-out 1 both slideInUp
+
+      .illustration-3
+        animation: $animation-duration - 0.3s $animation-delay + .8s ease-in-out 1 both slideInUp
+      .illustration-5
+        animation: $animation-duration - 0.3s $animation-delay + .8s ease-in-out 1 both slideInUp
+
+    // 3-rd Items loading
+    .intro__illustrations
+      .object-1
+        animation: $animation-duration $animation-delay + 1.2s ease-in-out 1 both slideInUp
+      .object-2
+        animation: $animation-duration $animation-delay + 1.2s ease-in-out 1 both slideInDown
+/* ------------------------------------------------*/
+/* Loading Animation Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Fonts Start
+/* ------------------------------------------------*/
+// Oswald Font
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese')
+// Roboto Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese')
+/* ------------------------------------------------*/
+/* Fonts End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Base CSS Styles Start
+/* ------------------------------------------------*/
+*, *::before, *::after
+  box-sizing: border-box
+
+button:active, button:focus
+  outline: none !important
+
+button::-moz-focus-inner
+  border: 0 !important
+
+input::-moz-focus-inner
+  border: 0 !important
+
+::selection
+  background-color: $bright-turquoise
+  color: $txt-dark
+  text-shadow: none
+
+html
+  font-family: sans-serif
+  font-size: 62.5%
+  +font-smoothing
+
+html,
+body
+  width: 100%
+  height: 100%
+
+body
+  position: relative
+  min-width: 320px
+  overflow-x: hidden !important
+  background-color: $bg-light
+  font: normal 400 1.6rem/1.6 $default-font
+  color: $txt-dark
+
+section
+  position: relative
+  min-width: 320px
+
+a
+  text-decoration: none
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  transition: all $animation-duration ease-in-out
+
+img
+  display: block
+  width: 100%
+  height: auto
+
+.overflow-hidden
+  overflow: hidden !important
+
+.color-layer
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.gradient-layer-dark
+  background-color: rgba($bg-dark, 0.8)
+
+h1
+  font: normal 500 4rem/1.1 $caption-font
+  text-transform: uppercase
+  color: $txt-white
+  span
+    &.gradient-text
+      color: $radical-red
+      background: -webkit-linear-gradient(0deg, rgba(252,70,107,1) 0%,rgba(0,219,222,1) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+  +MQ(M)
+    font-size: 6rem
+  +MQ(XXL)
+    font-size: 8rem
+/* ------------------------------------------------*/
+/* Base CSS Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles Start
+/* ------------------------------------------------*/
+.btn
+  position: relative
+  display: block
+  border: none
+  outline: 0
+  padding: 0
+  font: inherit
+  background-color: transparent
+  cursor: pointer
+  text-decoration: none
+  user-select: none
+  overflow: hidden
+  text-align: center
+  width: 100%
+  +MQ(S)
+    display: inline-block
+    width: auto
+
+.btn-l
+  margin: 0 0 1rem 0
+  &:last-of-type
+    margin: 0
+  .btn-caption
+    position: relative
+    display: block
+    height: 50px
+    padding: 0 4rem
+    font: normal 400 1.4rem/50px $caption-font
+    text-transform: uppercase
+    letter-spacing: 0.1rem
+    color: $txt-white
+    transition: color .3s
+  .btn-border
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    border: 2px solid $bg-light
+  .btn-hover
+    display: block
+    position: absolute
+    left: 0
+    width: 100%
+    height: 300%
+    +radicalred-turquoise-gradient-right
+    transition: transform .5s
+  +MQ(S)
+    margin: 0 2rem 0 0
+    &:last-of-type
+      margin: 0
+
+.btn-gradient
+  .btn-hover
+    top: -100%
+    transform: translateY(0) rotate(0deg)
+  .no-touch &:hover
+    .btn-hover
+      transform: translateX(114%) rotate(25deg)
+
+.btn-outline
+  .btn-hover
+    top: -150%
+    transform: translateX(-105%) rotate(25deg)
+  .no-touch &:hover
+    .btn-hover
+      transform: translateY(0) rotate(0deg)
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Intro Styles Start
+/* ------------------------------------------------*/
+.intro
+  position: relative
+  background-color: $bg-dark
+  background-image: url('../img/demo/bg-demo.jpg')
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover
+  padding-bottom: 160px
+  .color-layer
+    background-image: url('../img/demo/demo-pattern.svg')
+    background-repeat: repeat-x
+    background-position: left bottom
+    background-size: auto
+  +MQ(M)
+    padding-bottom: 350px
+  +MQ(L)
+    padding-bottom: 480px
+  +MQ(XXL)
+    padding-bottom: 660px
+
+header
+  position: relative
+  padding: 3.3rem calc(10% - 15px) 0 calc(10% - 15px)
+  z-index: 1
+  .buttons,
+  .logo
+    text-align: center
+    opacity: 0
+  .logo
+    margin-bottom: 3rem
+    img
+      display: block
+      width: auto
+      margin: 0 auto
+  +MQ(M)
+    padding: 5rem calc(10% - 15px) 0 calc(10% - 15px)
+    .buttons
+      text-align: right
+    .logo
+      margin: 0
+      text-align: left
+      img
+        margin: 0
+  +MQ(XL)
+    padding: 6rem 8.5rem 0 8.5rem
+  +MQ(XXL)
+    padding: 8rem 10.5rem 0 10.5rem
+
+.intro__content
+  position: relative
+  .headline
+    padding: 8rem calc(10% - 15px) 8rem calc(10% - 15px)
+    text-align: center
+  +MQ(M)
+    .headline
+      padding: 10rem calc(10% - 15px) 10rem calc(10% - 15px)
+  +MQ(XL)
+    .headline
+      padding: 6rem 8.5rem 14rem 8.5rem
+      h1
+        max-width: 70rem
+        margin: 0 auto
+  +MQ(XXL)
+    .headline
+      padding: 9rem 10.5rem 19rem 10.5rem
+      h1
+        max-width: 90rem
+
+.intro__illustrations
+  position: absolute
+  left: 0
+  bottom: -40px
+  width: 100%
+  height: 227px
+  overflow: hidden
+  z-index: 10
+  +MQ(M)
+    height: 497px
+    bottom: -90px
+  +MQ(L)
+    bottom: -114px
+    height: 671px
+  +MQ(XXL)
+    bottom: -170px
+    height: 941px
+
+.illustration-1
+  position: absolute
+  +center(x)
+  bottom: 0
+  width: 320px
+  height: 227px
+  background-image: url('../img/demo/illustration-1.png')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: 1
+  +MQ(M)
+    width: 700px
+    height: 497px
+  +MQ(L)
+    width: 946px
+    height: 671px
+  +MQ(XXL)
+    width: 1326px
+    height: 941px
+
+.illustration-2, .illustration-3, .illustration-4, .illustration-5
+  display: none
+  +MQ(XL)
+    display: block
+
+.illustration-6, .illustration-7
+  display: none
+  +MQ(M)
+    display: block
+    position: absolute
+
+.illustration-2
+  position: absolute
+  left: 66px
+  top: 200px
+  width: 516px
+  height: 290px
+  background-image: url('../img/demo/illustration-2.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+  +MQ(XL)
+    left: 38px
+    top: 140px
+    width: 360px
+    height: 202px
+  +MQ(XXL)
+    left: 50px
+    top: 196px
+    width: 516px
+    height: 290px
+
+.illustration-3
+  position: absolute
+  left: 118px
+  top: 414px
+  width: 300px
+  height: 225px
+  background-image: url('../img/demo/illustration-3.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22)
+  +MQ(XL)
+    left: 90px
+    top: 230px
+    width: 208px
+    height: 235px
+  +MQ(XXL)
+    left: 120px
+    top: 324px
+    width: 300px
+    height: 339px
+
+.illustration-4
+  position: absolute
+  right: 60px
+  top: 240px
+  width: 516px
+  height: 290px
+  background-image: url('../img/demo/illustration-4.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+  +MQ(XL)
+    right: 60px
+    top: 170px
+    width: 360px
+    height: 202px
+  +MQ(XXL)
+    right: 60px
+    top: 240px
+    width: 516px
+    height: 290px
+
+.illustration-5
+  position: absolute
+  right: -120px
+  top: 420px
+  width: 516px
+  height: 290px
+  background-image: url('../img/demo/illustration-5.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22)
+  +MQ(XL)
+    right: -80px
+    top: 290px
+    width: 360px
+    height: 202px
+  +MQ(XXL)
+    right: -120px
+    top: 424px
+    width: 516px
+    height: 290px
+
+.object
+  display: block
+  position: absolute
+
+.object-1
+  display: block
+  top: 0px
+  right: 6%
+  width: 140px
+  height: auto
+  +MQ(M)
+    width: auto
+    right: 40px
+  +MQ(L)
+    right: 7%
+  +MQ(XL)
+    right: 200px
+  +MQ(XXL)
+    top: 10px
+    right: 340px
+/* ------------------------------------------------*/
+/* Intro Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Preview Sections Styles Start
+/* ------------------------------------------------*/
+.demo__content
+  padding: 3rem 0
+  background-color: $bg-light
+  &.last-section
+    background-color: #dbe3e9
+  +MQ(M)
+    padding: 4rem 0
+    &.first-section
+      padding: 5rem 0 4rem 0
+  +MQ(XL)
+    &.first-section
+      padding: 6rem 0 4rem 0
+  +MQ(XXL)
+    padding: 5rem 0
+    &.first-section
+      padding: 12rem 0 5rem 0
+/* ------------------------------------------------*/
+/* Preview Sections Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Headline Styles Start
+/* ------------------------------------------------*/
+.demo__headline
+  width: 100%
+  padding: 5rem calc(10% - 15px)
+  text-align: center
+  .title
+    font: normal 600 3rem/1.2 $caption-font
+    text-transform: uppercase
+    color: $txt-dark
+  .subtitle
+    font: normal 400 1.6rem/1.6 $default-font
+    color: $txt-dark
+    margin-top: 2.4rem
+  +MQ(M)
+    padding: 7rem calc(10% - 15px)
+    .title
+      font-size: 4rem
+    .subtitle
+      max-width: 500px
+      margin: 2.4rem auto 0
+  +MQ(XL)
+    padding: 7rem 8.5rem
+    .title
+      font-size: 4rem
+  +MQ(XXL)
+    padding: 8rem 10.5rem
+    .title
+      font-size: 6rem
+      font-weight: 500
+
+.demo__links
+  position: relative
+  +clearfix
+  width: 100%
+  padding: 0 calc(10% - 15px)
+  +MQ(XL)
+    padding: 0 8.5rem
+  +MQ(XXL)
+    padding: 0 10.5rem
+/* ------------------------------------------------*/
+/* Headline Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Preview Links Styles Start
+/* ------------------------------------------------*/
+figure
+  position: relative
+  margin-bottom: 5rem
+
+  a
+    display: block
+    .no-touch &:hover
+      .item__image
+        transform: translateY(-1.6rem)
+        box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+
+  .item__image
+    position: relative
+    width: 100%
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.06), 0 3px 14px 2px rgba(0,0,0,0.08), 0 5px 5px -3px rgba(0,0,0,0.1)
+    transform: translateY(0)
+    transition: all .5s cubic-bezier(0, 1.04, 0.68, 1.04)
+
+  figcaption
+    display: block
+    text-align: center
+    p
+      margin-top: 1.4rem
+      font: normal 500 1.6rem/1.2 $caption-font
+      text-transform: uppercase
+      color: tint($txt-dark, 10%)
+
+  +MQ(M)
+    margin-bottom: 7rem
+    figcaption
+      p
+        font-size: 2rem
+        margin-top: 2.4rem
+  +MQ(XXL)
+    margin-bottom: 8rem
+    figcaption
+      p
+        font-size: 2.6rem
+/* ------------------------------------------------*/
+/* Preview Links Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Subscribe Section Styles Start
+/* ------------------------------------------------*/
+.demo__subscribe
+  background-color: $bg-dark
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  background-attachment: fixed
+  background-image: url(../img/demo/bg-demo-subscribe.jpg)
+
+.subscribe__container
+  position: relative
+  padding: 8rem calc(10% - 15px)
+  text-align: center
+  +MQ(M)
+    padding: 11rem calc(10% - 15px)
+  +MQ(XL)
+    padding: 11rem 8.5rem
+  +MQ(XXL)
+    padding: 13rem 10.5rem
+
+.subscribe-title
+  .title
+    font: normal 500 3rem/1.2 $caption-font
+    text-transform: uppercase
+    color: $txt-white
+    margin: 0 0 3.6rem 0
+  +MQ(M)
+    max-width: 500px
+    margin: 0 auto
+    .title
+      font-size: 4rem
+  +MQ(XXL)
+    .title
+      font-size: 4.8rem
+
+.form-container
+  position: relative
+  +MQ(M)
+    max-width: 500px
+    margin: 0 auto
+
+.reply-group
+  position: absolute
+  +center
+  width: 100%
+  text-align: center
+  opacity: 0
+  transition: opacity $animation-duration - .3s ease-in-out
+  &.is-visible
+    opacity: 1
+
+.reply-group__icon
+  display: block
+  position: relative
+  font-size: 4.8rem
+  line-height: 1
+  color: $radical-red
+  &::before
+    background: -webkit-linear-gradient(-45deg, rgba(252,70,107,1) 0%,rgba(0,219,222,1) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.reply-group__title
+  font: normal 500 2.4rem/1.2 $caption-font
+  text-transform: uppercase
+  letter-spacing: 0.1rem
+  color: $txt-white
+  margin-top: .7rem
+
+.reply-group__text
+  display: block
+  font-size: 1.4rem
+  color: $txt-white-transparent
+  margin-top: .4rem
+
+form
+  position: relative
+  width: 100%
+
+  input, textarea
+    position: relative
+    display: block
+    width: 100%
+    border: none
+    outline: none
+    margin: 0
+    padding: 0
+    background-color: transparent
+    padding: 1.2rem .2rem
+    font: normal 400 1.4rem/1.6 $default-font
+    transition: border-bottom .6s
+
+  input
+    height: 4.2rem
+    margin: 0 0 2.4rem 0
+
+  textarea
+    height: 12rem
+    resize: none
+    margin: 0 0 .8rem 0
+
+.form-light
+  input, textarea
+    font-weight: 300
+  ::-webkit-input-placeholder
+    color: rgba($txt-white, .6)
+
+  :-moz-placeholder
+    color: rgba($txt-white, .6)
+
+  ::-moz-placeholder
+    color: rgba($txt-white, .6)
+
+  :-ms-input-placeholder
+    color: rgba($txt-white, .6)
+
+  input:focus:required:invalid,
+  textarea:focus:required:invalid
+    color: $txt-white
+  input:required:valid,
+  textarea:required:valid
+    color: $txt-white
+
+  input, textarea
+    border-bottom: 2px solid $bg-light
+    color: $txt-white
+    &:focus
+      border-bottom: 2px solid $radical-red
+
+.form
+  opacity: 1
+  text-align: center
+  transition: opacity $animation-duration - .3s ease-in-out
+  &.is-hidden
+    opacity: 0
+/* ------------------------------------------------*/
+/* Subscribe Section Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Footer Styles Start
+/* ------------------------------------------------*/
+.demo__footer
+  background-color: $bg-light
+  position: relative
+  padding: 5rem calc(10% - 15px)
+  p
+    font: normal 600 1.6rem/1.2 $caption-font
+    text-align: center
+    color: tint($txt-dark, 10%)
+    text-transform: uppercase
+    letter-spacing: 0.025em
+  a
+    font: normal 600 1.6rem/1.2 $caption-font
+    color: tint($txt-dark, 10%)
+    .no-touch &:hover
+      color: $bright-turquoise
+  i
+    color: $radical-red
+    &::before
+      background: -webkit-linear-gradient(-45deg, rgba(252,70,107,1) 0%,rgba(0,219,222,1) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+  +MQ(M)
+    padding: 5rem calc(10% - 15px)
+    p,
+    a
+      font-size: 2rem
+  +MQ(M)
+
+  +MQ(XL)
+    padding: 5rem 8.5rem
+  +MQ(XXL)
+    padding: 6rem 10.5rem
+/* ------------------------------------------------*/
+/* Footer Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Animations Start
+/* ------------------------------------------------*/
+@keyframes blockMove
+  0%
+    transform: translateY(102%)
+  35%
+    transform: translateY(0)
+  55%
+    transform: translateY(0)
+  100%
+    transform: translateY(-102%)
+
+@keyframes itemsOpacity
+  0%
+    opacity: 1
+  35%
+    opacity: 1
+  60%
+    opacity: 0
+  100%
+    opacity: 0
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+@keyframes slideInUp
+  from
+    transform: translate3d(0, 30px, 0)
+    opacity: 0
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+
+@keyframes slideInDown
+  from
+    transform: translate3d(0, -30px, 0)
+    opacity: 0
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+/* ------------------------------------------------*/
+/* Animations End
+/* ------------------------------------------------*/

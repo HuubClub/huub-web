@@ -1,0 +1,69 @@
+.socials
+  ul
+    display: block
+    position: relative
+    width: 100%
+    height: auto
+    padding: 0 3.3rem
+    text-align: center
+    li
+      display: inline-block
+      line-height: 1
+      margin-right: 2.4rem
+      &:last-of-type
+        margin-right: 0
+      a
+        font: normal 400 1.4rem/0.8 $caption-font
+        text-transform: uppercase
+        letter-spacing: 0.1rem
+        color: $txt-white
+      .no-touch &:hover
+        a
+          color: $bright-turquoise
+
+  +MQ(XL)
+    ul
+      padding: 0
+      text-align: center
+      li
+        display: block
+        margin-right: 0
+        margin-bottom: 3.3rem
+        &:last-of-type
+          margin-bottom: 0
+        a
+          color: $txt-white
+
+.socials-mobile
+  display: block
+  position: relative
+  width: 100%
+  padding: 3.3rem 0
+  +MQ(XL)
+    display: none
+
+.socials-desktop
+  display: none
+  +MQ(XL)
+    display: block
+    +position(fixed, null null 3.3rem 0)
+    width: 100px
+    margin-bottom: 0
+    z-index: 11
+
+.socials-absolute
+  +position(absolute, null null 3.3rem 0)
+  margin-bottom: 0
+  +MQ(XL)
+    width: auto
+    height: auto
+    +position(fixed, 3.3rem 3.3rem auto auto)
+    padding: 0
+
+    ul
+      li
+        display: inline-block
+        margin-bottom: 0
+        margin-right: 2.4rem
+        &:last-of-type
+          margin-right: 0

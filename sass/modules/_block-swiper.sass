@@ -1,0 +1,77 @@
+// ------------------------------------------------
+// Swiper Slider Plugin Custom Styles Start
+// ------------------------------------------------
+
+.swiper-container
+  width: 100%
+  height: 100vh
+  min-height: 568px
+  +MQ(XL)
+    width: 100%
+    height: 100%
+
+.swiper-slide
+  width: 100%
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.slide-caption
+  width: 100%
+  position: absolute
+  left: 0
+  bottom: 6.8rem
+  padding: 0 3.3rem
+  color: $txt-white
+
+  span
+    display: block
+    font: normal 400 1.4rem/1.6 $caption-font
+    text-transform: uppercase
+    letter-spacing: 0.1rem
+    color: $txt-white-transparent
+
+  p
+    font: normal 500 2.6rem/1.2 $caption-font
+    text-transform: uppercase
+    color: $txt-white
+    margin: 0
+
+  +MQ(XL)
+    width: auto
+    left: auto
+    right: 0
+    bottom: 3.3rem
+    text-align: right
+
+.swiper-pagination,
+.swiper-container-horizontal>.swiper-pagination-bullets
+  display: inline-block
+  position: absolute
+  bottom: 3.3rem
+  right: auto
+  left: 3.3rem
+  width: auto
+  text-align: right
+  line-height: 1
+  +MQ(XL)
+    bottom: 3.3rem
+    left: 3.3rem
+
+.swiper-pagination-bullet
+  width: 60px
+  height: 2px
+  opacity: 1
+  background-color: rgba(255,255,255,1)
+  border-radius: 0
+  margin: 0 !important
+  transition: background-color .3s
+
+.swiper-pagination-bullet-active
+  height: 4px
+  +radicalred-turquoise-gradient-right
+  margin-bottom: -1px !important
+
+// ------------------------------------------------
+// Swiper Slider Plugin Custom Styles End
+// ------------------------------------------------

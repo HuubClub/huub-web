@@ -1,0 +1,117 @@
+h1
+  font: normal 500 4.8rem/1.1 $caption-font
+  text-transform: uppercase
+  color: $txt-white
+  span
+    &.gradient-text
+      color: $radical-red
+      background: -webkit-linear-gradient(0deg, rgba(252,70,107,1) 0%,rgba(0,219,222,1) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+  &.large
+    font-size: 4.8rem
+  +MQ(M)
+    font-size: 6rem
+    &.large
+      font-size: 6rem
+  +MQ(L)
+    &.large
+      font-size: 8rem
+  +MQ(XXL)
+    font-size: 7.5rem
+    &.large
+      font-size: 11rem
+
+h2
+  font: normal 500 4.6rem/1.1 $caption-font
+  text-transform: uppercase
+  color: $txt-white
+  +MQ(M)
+    font-size: 4.6rem
+  +MQ(XXL)
+    font-size: 6rem
+
+.subtitle
+  display: block
+  font: normal 400 1.4rem/1.2 $default-font
+  text-transform: uppercase
+  letter-spacing: 0.1rem
+  color: $txt-white
+  padding-left: 2px
+
+h3
+  font: normal 500 2.6rem/1.2 $caption-font
+  text-transform: uppercase
+  color: $txt-dark
+  small
+    display: block
+    font: normal 500 1.4rem/1.6 $caption-font
+    text-transform: uppercase
+    color: tint($txt-dark, 38%)
+
+h4
+  font: normal 400 1.8rem/1.2 $caption-font
+  text-transform: uppercase
+  color: $txt-white
+  +MQ(XXL)
+    font-size: 2.2rem
+
+h5
+  font: normal 400 1.6rem/1.2 $caption-font
+  text-transform: uppercase
+  color: $txt-white
+  +MQ(XXL)
+    font-size: 1.8rem
+
+p
+  font: normal 300 1.6rem/1.6 $default-font
+  color: $txt-white-transparent
+  span
+    font-weight: 700
+    color: $txt-white
+  &.headline__text
+    color: $txt-white
+    max-width: 460px
+    margin-top: 3.6rem
+  &.section-text
+    padding-left: 2px
+    margin-top: 3.6rem
+  +MQ(XXL)
+    font-size: 1.6rem
+
+.media-copyright,
+.side-copyright
+  p
+    font: normal 400 1.1rem/1.4 $default-font
+    text-transform: uppercase
+    letter-spacing: 0.1rem
+    color: $txt-white
+  a
+    color: $txt-white
+    .no-touch &:hover
+      color: $bright-turquoise
+
+.side-copyright
+  p
+    color: $txt-white-muted
+
+a
+
+.popup-title
+
+.popup-title__subtitle
+  display: block
+  font: normal 400 1.4rem/1.2 $default-font
+  text-transform: uppercase
+  letter-spacing: 0.1rem
+  color: $txt-white
+  padding-left: 2px
+
+.popup-title__title
+  font: normal 500 4.6rem/1.1 $caption-font
+  text-transform: uppercase
+  color: $txt-white
+
+.popup-title__text
+  color: $txt-white-transparent
+  margin-top: 3.6rem

@@ -1,0 +1,200 @@
+.header
+  +position(fixed, 0 null null 0)
+  background-color: $bg-dark
+  width: 100%
+  height: 100px
+  z-index: 10
+  border-bottom: 1px solid rgba(255,255,255,0.2)
+  &.transparent
+    background-color: $bg-dark
+
+  .logo
+    +position(absolute, 0 null null 0)
+    width: 100px
+    height: 100px
+    +radicalred-turquoise-gradient-45deg
+    img
+      display: block
+      width: auto
+      height: auto
+      position: absolute
+      +center
+
+  .menu-button
+    +position(absolute, 0 0 null null)
+    padding: 3.3rem
+
+  +MQ(XL)
+    +position(fixed, 0 null null 0)
+    width: 100px
+    height: 100%
+    border-bottom: none
+    border-right: 1px solid rgba(255,255,255,0.2)
+    z-index: 10
+    &.transparent
+      background-color: transparent
+
+    .menu-button
+      top: auto
+      right: auto
+      left: 0
+      +center(y)
+
+// Main section general styles
+.main-section
+  position: relative
+  padding-top: 100px
+  background-color: $bg-dark
+  //display: none
+  &.transparent
+    height: 100%
+    min-height: 568px
+    background-color: transparent
+
+  &.animate-out
+    .main-section__intro,
+    .main-section__media
+      opacity: 0
+      visibility: hidden
+
+  // notify popup is visible state
+
+  &.notify-is-visible
+    .main-section__media
+      opacity: 0
+      visibility: hidden
+    .headline
+      opacity: 0
+
+  // view change on desktop
+  +MQ(XL)
+    height: 100%
+    min-height: 546px
+    padding-top: 0
+
+    // notify popup is visible state
+    &.notify-is-visible
+      .main-section__media
+        opacity: 1
+        visibility: visible
+      .headline
+        opacity: 0
+
+// Main section content common
+.main-section__content
+  &.absolute
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+  +MQ(XL)
+    +position(absolute, 0 0 null null)
+    width: 100%
+    height: 100%
+    &.absolute
+      +position(absolute, 0 0 null auto)
+      height: 100%
+
+.main-section__intro,
+.main-section__media
+  transition: all $animation-duration - .2s ease-in-out
+
+// Main section intro
+.main-section__intro
+  position: relative
+  .intro-content
+    position: relative
+    padding: 100px 0
+    &.fullheight-mobile
+      padding: 0
+  +MQ(XL)
+    height: 100%
+    .intro-content
+      height: 100%
+      padding: 0 0 0 100px
+  +MQ(XXL)
+    .intro-content
+
+.headline
+  position: relative
+  padding: 0 3.3rem
+  transition: all $animation-duration ease-in-out
+  &.headline-bottom
+    position: absolute
+    left: 0
+    +center(y)
+    margin-top: 1.4rem
+  +MQ(XL)
+    position: absolute
+    left: 100px
+    +center(y)
+    width: calc(100% - 100px)
+    padding: 0 10rem
+    &.headline-bottom
+      left: 100px
+      width: calc(100% - 100px)
+      top: auto
+      bottom: 80px
+      transform: translateY(0)
+      margin-top: 0
+  +MQ(XXL)
+    padding: 0 12rem
+    &.headline-bottom
+      bottom: 90px
+
+.headline__text
+.headline__btnholder
+  margin-top: 4rem
+
+// Main section media
+.main-section__media
+  position: relative
+  padding: 0
+  height: 100vh
+  min-height: 568px
+  overflow: hidden
+  .media-content
+    position: relative
+    width: 100%
+    height: 100%
+  .media-image
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+  .media-copyright
+    +position(absolute, null null 3.3rem 0)
+    width: 100%
+    padding: 0 3.3rem
+    text-align: center
+  +MQ(XL)
+    height: 100%
+    .media-content
+      position: relative
+      height: 100%
+    .media-copyright
+      +position(absolute, null 3.3rem 3.3rem auto)
+      width: auto
+      padding: 0
+      text-align: right
+
+.main-section__darkscreen
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-color: shade($bg-dark, 20%)
+  transform: translateY(102%)
+
+.side-copyright
+  display: none
+  +MQ(XL)
+    display: block
+    +position(fixed, null auto 3.3rem 3.3rem)
+    padding: 0
+    text-align: left
+    padding-top: .2rem
+    padding-left: .4rem
+    transform-origin: bottom left
+    transform: rotate(-90deg) translateY(100%)
+    z-index: 11
