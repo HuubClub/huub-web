@@ -7996,9 +7996,8 @@ html {
 
 .fa-border {
   border: solid 0.08em #eee;
-  -webkit-border-radius: .1em;
-     -moz-border-radius: .1em;
-          border-radius: .1em;
+  -moz-border-radius: .1em;
+       border-radius: .1em;
   padding: .2em .25em .15em;
 }
 
