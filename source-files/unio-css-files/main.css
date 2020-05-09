@@ -629,6 +629,12 @@ p.section-text {
   }
 }
 
+p a {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .media-copyright p,
 .side-copyright p {
   font: normal 400 1.1rem/1.4 "Roboto", serif;
@@ -1240,14 +1246,6 @@ form .inputs-description {
   width: auto;
   height: auto;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-     -moz-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
 }
 
 .header .menu-button {
