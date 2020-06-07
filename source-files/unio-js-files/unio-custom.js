@@ -171,8 +171,8 @@ $(function() {
   // --------------------------------------------- //
   // KBW-Countdown Start
   // --------------------------------------------- //
-  $('#countdown').countdown({until: $.countdown.UTCDate(+540, 2020, 6-1, 20, 19, 0, 0, 0), format: 'D'});
-  $('#countdown-large').countdown({until: $.countdown.UTCDate(+540, 2020, 6-1, 20, 19, 0, 0, 0), format: 'DHMS'});
+  $('#countdown').countdown({until: $.countdown.UTCDate(+540, 2020, 7-1, 4, 19, 0, 0, 0), format: 'D'});
+  $('#countdown-large').countdown({until: $.countdown.UTCDate(+540, 2020, 7-1, 4, 19, 0, 0, 0), format: 'DHMS'});
   // --------------------------------------------- //
   // KBW-Countdown End
   // --------------------------------------------- //
