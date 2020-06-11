@@ -3366,6 +3366,7 @@ form .inputs-description {
 
 .pswp__caption__center p {
   font: normal 400 1.6rem/1.7 "Roboto", serif;
+  line-height: 1.2em;
   color: rgba(255, 255, 255, 0.7);
 }
 
